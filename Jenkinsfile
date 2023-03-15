@@ -2,7 +2,7 @@ pipeline {
 	agent {
 		label {
 			label "built-in" 
-			customWorkspace "/mnt/docker " 
+			customWorkspace "/mnt/data-1 " 
 		}	
 	}
 
