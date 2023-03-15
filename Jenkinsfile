@@ -11,8 +11,8 @@ pipeline {
 		stage ("stage-1") {
 
 			steps {
-				 echo " hi everyone "	
-					
+				 sh "docker run -itdp 8080:80 --name server-1 httpd "	
+				 sh "cp /mnt/data-1/index.html /usr/local/apache2/htdocs "	
 
 			}				
 
