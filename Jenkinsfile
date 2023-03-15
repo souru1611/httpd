@@ -2,7 +2,7 @@ pipeline {
 	agent {
 		label {
 			label "built-in" 
-			customWorkspace "/mnt/data-1 " 
+			customWorkspace "/mnt/data-3 " 
 		}	
 	}
 
@@ -11,8 +11,8 @@ pipeline {
 		stage ("stage-1") {
 
 			steps {
-				 echo " hi everyone "	
-					
+				sh "docker run -itdp 8082:80 --name server-3 httpd "	
+				sh "cp /mnt/data-3/index.html /usr/local/apache2/htdocs "	
 
 			}				
 
