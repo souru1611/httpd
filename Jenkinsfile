@@ -15,7 +15,7 @@ pipeline {
 				sh "systemctl start docker"
 				sh "docker rmi -f httpd "
 				sh "docker run -d httpd "
-				sh "docker run -itdp 8083:80 --name server-4 httpd "
+				sh "docker run -itdp 8085:80 --name server-5 httpd "
 				sh "docker cp /mnt/data-0/index.html /usr/local/apache2/htdocs "
 				
 			}				
